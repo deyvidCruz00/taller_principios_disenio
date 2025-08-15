@@ -29,26 +29,6 @@ public class CandidatoService {
         return ordenador.ordenar(new ArrayList<>(candidatos));
     }
 
-    public List<Candidato> obtenerTodosCandidatos() {
-        return new ArrayList<>(candidatos);
-    }
-
-    public int contarCandidatos() {
-        return candidatos.size();
-    }
-
-    public int contarEtniasMinoritarias() {
-        return (int) candidatos.stream()
-                .filter(Candidato::esEtniaMinoritaria)
-                .count();
-    }
-
-    public double obtenerPromedioICFES() {
-        return candidatos.stream()
-                .mapToInt(Candidato::getResultadoGlobalICFES)
-                .average()
-                .orElse(0.0);
-    }
 
     public void cargarDatosPrueba() {
         candidatos.clear();

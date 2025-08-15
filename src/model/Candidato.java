@@ -37,10 +37,14 @@ public class Candidato {
         return this.etnia;
     }
 
-    @Override
     public String toString() {
-        return String.format("%-20s %-20s %5d %15s",
-                nombre, apellidos, resultadoGlobalICFES,
-                esEtniaMinoritaria() ? "Sí" : "No");
+        return String.format("%-20s %-20s %5d %15s %10d %10d",
+                nombre,
+                apellidos,
+                resultadoGlobalICFES,
+                esEtniaMinoritaria() ? "Sí" : "No",
+                resultadoMatematicas,
+                resultadoIngles
+        );
     }
 }
