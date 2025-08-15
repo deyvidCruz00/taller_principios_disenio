@@ -1,10 +1,7 @@
 package model.services;
 
 import model.Candidato;
-import model.criteria.CriterioEtniaMinoritaria;
-import model.criteria.CriterioICFES;
-import model.criteria.CriterioMatematicas;
-import model.criteria.CriterioOrdenamiento;
+import model.criteria.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -18,15 +15,15 @@ public class OrdenadorCandidatos {
 
     public OrdenadorCandidatos() {
         this.criterios = Arrays.asList(
-                new CriterioEtniaMinoritaria(),
                 new CriterioICFES(),
-                new CriterioMatematicas()
+                new CriterioMatematicas(),
+                new CriterioIngles()
         );
     }
 
     public List<Candidato> ordenar(List<Candidato> candidatos) {
         return candidatos.stream()
-                .sorted(this::compararCandidatos)
+                .sorted((c1, c2) -> compararCandidatos(c1, c2))
                 .collect(Collectors.toList());
     }
 
@@ -34,7 +31,7 @@ public class OrdenadorCandidatos {
         for (CriterioOrdenamiento criterio : criterios) {
             int resultado = criterio.comparar(c1, c2);
             if (resultado != 0) {
-                return resultado;
+                return resultado; // ya en orden descendente dentro del criterio
             }
         }
         return 0;
