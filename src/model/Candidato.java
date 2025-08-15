@@ -1,10 +1,6 @@
 package model;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
-import java.util.stream.Collectors;
-
 // Principio 1: Single Responsibility Principle (SRP)
 // Cada clase tiene una única responsabilidad
 public class Candidato {

@@ -1,4 +1,6 @@
-package model;
+package model.criteria;
+
+import model.Candidato;
 
 public class CriterioMatematicas implements CriterioOrdenamiento {
     @Override
