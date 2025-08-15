@@ -23,10 +23,10 @@ public class CandidatoView {
     }
 
     public void mostrarTablaCandidatos(List<Candidato> candidatos) {
-        System.out.println("=== 📊 TABLA DE CANDIDATOS ORDENADOS ===");
+        System.out.println("===TABLA DE CANDIDATOS ORDENADOS ===");
 
 
-        System.out.println("\n📋 Criterios de selección aplicados:");
+        System.out.println("\nCriterios de selección aplicados:");
         System.out.println("   1.  Etnia minoritaria (máxima prioridad)");
         System.out.println("   2. Resultado global ICFES (orden descendente)");
         System.out.println("   3. Resultado en matemáticas (criterio de desempate)");
@@ -51,7 +51,7 @@ public class CandidatoView {
     }
 
     public Candidato capturarDatosCandidato(int numero) {
-        System.out.println("\n--- 👤 Candidato "+ numero + " ---");
+        System.out.println("\n--- Candidato "+ numero + " ---");
         scanner.nextLine();
         System.out.print("Nombre: ");
         String nombre = scanner.nextLine().trim();

@@ -13,7 +13,7 @@ public class MenuView {
     }
     
     public int mostrarMenuPrincipal() {
-        System.out.println("\n🔧 MENÚ PRINCIPAL");
+        System.out.println("\nMENÚ PRINCIPAL");
         System.out.println("1️ Ingresar candidatos manualmente");
         System.out.println("2️ Usar datos de prueba");
         System.out.println("3️ Mostrar tabla de candidatos");
