@@ -7,7 +7,6 @@ import view.MenuView;
 import java.util.List;
 
 /**
- * Controlador principal del sistema
  * Cumple con SRP: Solo coordina entre Model y View
  */
 public class CandidatoController {

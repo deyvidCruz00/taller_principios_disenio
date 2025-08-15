@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Vista principal del sistema
  * Cumple con SRP: Solo maneja la presentación de datos
  */
 public class CandidatoView {
