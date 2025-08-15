@@ -42,6 +42,8 @@ public class CandidatoView {
             System.out.printf("%-5d %s%n", posicion++, candidato.toString());
         }
         System.out.println("─".repeat(75));
+        System.out.println("Presione Enter para volver al menú...");
+        scanner.nextLine();
     }
 
     public void mostrarEstadisticas(int total, int etnias, double promedio) {
@@ -59,8 +61,12 @@ public class CandidatoView {
         System.out.print("Apellidos: ");
         String apellidos = scanner.nextLine().trim();
 
-        System.out.print("Etnia: ");
-        String etnia = scanner.nextLine().trim();
+        System.out.println("¿Pertenece a alguna etnia indígena o a una comunidad minoritaria?: ");
+        System.out.println("Ingrese la opcion correspondiente: ");
+        System.out.println("0: Si pertenece ");
+        System.out.println("1: No pertenece ");
+        int opcionEtnia = scanner.nextInt();
+        boolean etnia = validarEtnia(opcionEtnia);
 
         System.out.print("Resultado global ICFES (0-500): ");
         int resultadoICFES = scanner.nextInt();
@@ -74,6 +80,14 @@ public class CandidatoView {
 
         return new Candidato(nombre, apellidos, etnia, resultadoICFES,
                            java.time.LocalDate.now(), resultadoMat, resultadoIng);
+    }
+
+    public boolean validarEtnia(int opcion){
+        if(opcion==0){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public int solicitarNumeroCandidatos() {

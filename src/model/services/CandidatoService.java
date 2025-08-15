@@ -53,17 +53,17 @@ public class CandidatoService {
     public void cargarDatosPrueba() {
         candidatos.clear();
         candidatos.addAll(Arrays.asList(
-                new Candidato("Juan Carlos", "Pérez García", "Mestizo",
+                new Candidato("Juan Carlos", "Pérez García", true,
                         450, LocalDate.of(2024, 8, 15), 85, 75),
-                new Candidato("María Elena", "González López", "Indígena",
+                new Candidato("María Elena", "González López", true,
                         400, LocalDate.of(2024, 8, 10), 80, 70),
-                new Candidato("Carlos Andrés", "Rodríguez Silva", "Afrodescendiente",
+                new Candidato("Carlos Andrés", "Rodríguez Silva", true,
                         450, LocalDate.of(2024, 8, 20), 85, 80),
-                new Candidato("Ana Sofía", "Martínez Torres", "Mestizo",
+                new Candidato("Ana Sofía", "Martínez Torres", true,
                         480, LocalDate.of(2024, 8, 25), 90, 85),
-                new Candidato("Luis Fernando", "Herrera Vásquez", "Mestizo",
+                new Candidato("Luis Fernando", "Herrera Vásquez", true,
                         450, LocalDate.of(2024, 8, 12), 88, 75),
-                new Candidato("Sofía Isabel", "Jiménez Ruiz", "Raizal",
+                new Candidato("Sofía Isabel", "Jiménez Ruiz", false,
                         420, LocalDate.of(2024, 8, 18), 82, 78)
         ));
     }

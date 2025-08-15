@@ -25,6 +25,7 @@ public class CandidatoController {
         candidatoView.mostrarEncabezado();
 
         boolean continuar = true;
+        cargarDatosPrueba();
         while (continuar) {
             try {
                 int opcion = menuView.mostrarMenuPrincipal();
@@ -43,15 +44,9 @@ public class CandidatoController {
                 capturarCandidatos();
                 return true;
             case 2:
-                cargarDatosPrueba();
-                return true;
-            case 3:
                 mostrarTablaCandidatos();
                 return true;
-            case 4:
-                mostrarEstadisticas();
-                return true;
-            case 6:
+            case 3:
                 return false;
             default:
                 candidatoView.mostrarError("Opción no válida");
@@ -87,16 +82,4 @@ public class CandidatoController {
         }
     }
 
-    private void mostrarEstadisticas() {
-        int total = candidatoService.contarCandidatos();
-        if (total == 0) {
-            candidatoView.mostrarMensaje("No hay candidatos registrados para mostrar estadísticas");
-            return;
-        }
-
-        int etnias = candidatoService.contarEtniasMinoritarias();
-        double promedio = candidatoService.obtenerPromedioICFES();
-
-        candidatoView.mostrarEstadisticas(total, etnias, promedio);
-    }
 }

@@ -1,10 +1,7 @@
 package model.services;
 
 import model.Candidato;
-import model.criteria.CriterioEtniaMinoritaria;
-import model.criteria.CriterioICFES;
-import model.criteria.CriterioMatematicas;
-import model.criteria.CriterioOrdenamiento;
+import model.criteria.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -20,7 +17,8 @@ public class OrdenadorCandidatos {
         this.criterios = Arrays.asList(
                 new CriterioEtniaMinoritaria(),
                 new CriterioICFES(),
-                new CriterioMatematicas()
+                new CriterioMatematicas(),
+                new CriterioIngles()
         );
     }
 
